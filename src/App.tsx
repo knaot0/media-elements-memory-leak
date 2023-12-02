@@ -1,5 +1,5 @@
-import { useCallback, useState } from 'react';
-import Webcam from 'react-webcam';
+import { useCallback, useState } from "react";
+import Webcam from "react-webcam";
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -7,7 +7,9 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={toggle}>{open ? 'Delete' : 'Create'}</button>
+      <button id={open ? "delete-button" : "create-button"} onClick={toggle}>
+        {open ? "Delete" : "Create"}
+      </button>
       {open && <Webcam />}
     </div>
   );
